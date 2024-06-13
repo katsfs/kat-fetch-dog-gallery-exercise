@@ -1,0 +1,1 @@
+export const getBreedName = (breed: string, subBreed?: string) => subBreed ? `${subBreed} ${breed}` : breed;
