@@ -9,7 +9,7 @@ export default function BreedList() {
   return (
     <div className="breed-list">
       <div className="breed-list-title">Select Breeds</div>
-      <div>
+      <div className="breed-list-options">
         {Object.keys(breeds).map((breed) =>
           breeds[breed].length === 0
           ? <SelectableBreed key={breed} breed={breed} />

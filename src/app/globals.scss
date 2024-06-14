@@ -10,7 +10,6 @@ main {
 .breed-list {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  text-transform: capitalize;
   overflow-y: auto;
   height: 100%;
   background-color: white;
@@ -47,12 +46,22 @@ main {
     cursor: default;
     background-color: #E8F0F2;
     padding: 4px;
+    text-transform: uppercase;
+  }
+  .breed-list-options > .selectable-breed:not(:last-child) {
+    border-bottom: 1px solid gray;
   }
   .selectable-breed {
     display: flex;
     flex-direction: column;
     cursor: pointer;
     padding: 4px;
+    width: 100%;
+    background-color: white;
+    color: #2A385B;
+    border: none;
+    text-transform: capitalize;
+    font-size: 16px;
     &.selected {
       background-color: #D6EAD6;
     }
@@ -61,6 +70,9 @@ main {
     }
   }
   .sub-breed-list {
+    &:not(:last-child) {
+      border-bottom: 1px solid gray;
+    }
     .selectable-breed {
       padding-left: 16px;
     }

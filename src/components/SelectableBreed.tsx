@@ -10,8 +10,8 @@ export default function SelectableBreed ({ breed, subBreed } : Readonly<{ breed:
   const onClick = useCallback(() => onBreedSelected(breed, subBreed), [onBreedSelected]);
 
   return (
-    <div className={classNames("selectable-breed", { selected: !!selectedBreeds[breedName] })} onClick={onClick}>
+    <button className={classNames("selectable-breed", { selected: !!selectedBreeds[breedName] })} onClick={onClick}>
       {subBreed ?? breed}
-    </div>
+    </button>
   );
 };
